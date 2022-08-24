@@ -1,0 +1,27 @@
+{% extends "contenido/cuerpo.html" %}
+
+{%block titulo%} HOME {%endblock%}
+
+{% block contenedor %}
+{%load static%}
+<section class="py-3 text-center container">
+    <div class="row py-lg-3">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light fst-italic">Opiniones</h1>
+  </div>
+    </div>
+  </section>
+  <form action="{%url 'Editar' opinion.id%}" method="POST" role="form">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Nombre</label>
+      <input type="text" name="usuario" placeholder="{{opinion.usuario}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Comentario</label>
+      <input type="text" name="comentario" placeholder="{{opinion.comentario}}" class="form-control" id="exampleInputPassword1">
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+  <br>
+{% endblock %}

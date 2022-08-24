@@ -1,0 +1,46 @@
+{% extends "contenido/cuerpo.html" %}
+
+{%block titulo%} HOME {%endblock%}
+
+{% block contenedor %}
+{%load static%}
+<main>
+
+    <section class="py-3 text-center container">
+      <div class="row py-lg-3">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light fst-italic">Cátalogo de Productos</h1>
+          <p class="lead text-muted">Todos los productos ofrecidos en nuestro sitio son productos de primera calidad, los productos son elaborados por manos de Artesanos 100% Michoacanos!</p>
+        </div>
+      </div>
+    </section>
+  
+    <div class="album py-5 bg-light">
+      <div class="container">
+  
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            {%for artesania in artesania%}
+
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="{{artesania.imagen.url}}" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="">
+                  <div class="card-body">
+                    <h1 class="card-title fst-italic">{{artesania.nombre}}</h1>
+                    <p class="card-text">{{artesania.descripcion}}</p>
+                    <p class="card-text"> Municipio: <strong>{{artesania.municipio}}</strong></p>
+                    <p class="card-text">Precio: ${{artesania.costo}}</p>
+                  </div>
+                </div>
+              </div>
+
+            {%endfor%}
+
+
+        </div>
+      </div>
+    </div>
+  
+  </main>
+  
+  
+{% endblock %}

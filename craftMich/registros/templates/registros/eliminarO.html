@@ -1,0 +1,32 @@
+{% extends "contenido/cuerpo.html" %}
+
+{%block titulo%} HOME {%endblock%}
+
+{% block contenedor %}
+{%load static%}
+<section class="py-3 text-center container">
+    <div class="row py-lg-3">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light fst-italic">Eliminar</h1>
+  </div>
+    </div>
+  </section>
+  <form class="form-horizontal" method="POST">
+    {% csrf_token %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+
+            <div class="">
+                <h5>Eliminando Comentario...</h5>
+                <p>¿Estas seguro que deseas <strong>Eliminar</strong> el comentario seleccionado?</p>
+
+            </div>
+
+            <button type="submit" class="btn btn-danger">Si</button>
+            <a href="{%url 'Opinion'%}" class="btn btn-primary">Cancelar</a>
+
+        </div>
+    </div>
+</form>
+  <br>
+{% endblock %}

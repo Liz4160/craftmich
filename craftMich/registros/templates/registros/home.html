@@ -1,0 +1,62 @@
+{% extends "contenido/cuerpo.html" %}
+
+{%block titulo%} HOME {%endblock%}
+
+{% block contenedor %}
+{%load static%}
+<main class="container">
+    <div class="p-2  text-bg-dark">
+        <div class="col-md-10 px-0">
+          <h1 class="display-4 fst-italic">Michoacán !Solo uno!</h1>
+          <p class="lead">Las artesanías de Michoacán forman parte de sus más ricas tradiciones y una de las más admirables de México. La gran organización del imperio purépecha, dio estructura y continuidad al arte de transformar los recursos naturales en objetos de uso cotidiano y ceremonial. Además de que conjuntaron su arte con los oficios enseñados por el español Don Vasco de Quiroga, saberes ancestrales que se han conservado a través de los siglos, y que se transmiten amorosamente a las nuevas generaciones, haciendo de Michoacán un ejemplo cultural único en México.</p>
+        </div>
+
+      </div>
+       <br>
+      <!-- START THE FEATURETTES -->
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1 fst-italic">Artesanías<span class="text-muted"> de barro</span></h2>
+          <p class="lead">Las artesanías de Michoacán hechas de barro, están entre las más bellas. Este material tan simple es la base para la elaboración de hermosas piezas, tanto de objetos decorativos como de uso doméstico. En los talleres de los maestros artesanos michoacanos, encontrarás figurillas de formas fantásticas, de temas lacustres y personajes chuscos en barro alisado, bruñido o policromado, así como cerámica vidriada muy colorida.</p>
+        </div>
+        <div class="col-md-5">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"  width="500" height="500" src=" {%static 'contenido/img/barro.jpg'%}" > 
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1 fst-italic"> Artesanías <span class="text-muted"> de madera</span></h2>
+          <p class="lead">En diferentes comunidades michoacanas podrás encontrar grandes maestros carpinteros, creadores de artesanías de Michoacán hechas de madera. Se especializan no solo en la fabricación de muebles, sino también en el fino arte del labrado de madera. Los mejores sitios son Cuanajo, Opopeo, Pátzcuaro, Pichátaro y Zitácuaro. </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"  width="500" height="500" src=" {%static 'contenido/img/madera.jpg'%}" > 
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+  
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Artesanías<span class="text-muted"> de metal</span></h2>
+        <p class="lead">El cobre, el oro y la plata han sido transformados por los hábiles artesanos, en bellas artesanías de Michoacán hechas de metales, desde el inicio del imperio purépecha. En Santa Clara del Cobre y en Villa Escalante se crean brillantes piezas con la técnica del martillado. Aquí podrás encontrar desde delicada joyería hasta grandes cazos y jarrones elaborados con este material. </p>  
+        </div>
+        <div class="col-md-5">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"  width="500" height="500" src=" {%static 'contenido/img/metal.jpg'%}" > 
+        </div>
+      </div>
+  
+      <hr class="featurette-divider">
+  
+      <!-- /END THE FEATURETTES -->
+  
+    </div><!-- /.container -->
+  
+  </main>
+  
+{% endblock %}
